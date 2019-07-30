@@ -37,16 +37,14 @@ public struct ListViewModel: ListViewModelType,ListViewModelInputs,ListViewModel
         let isLoading = ActivityIndicator()
         self.isLoading = isLoading.asDriver()
         
-        let pageRequest = isLoading.asObservable().sample(loadPageTrigger).flatMap { [weak self] _isLoading -> Driver<[Taxi]> in
-            
-            guard let self = self else {
-                return Driver.empty()
-            }
+        let pageRequest = isLoading.asObservable().sample(loadPageTrigger).flatMap { _isLoading -> Driver<[Taxi]> in
             
             if !_isLoading {
                 
                 // Make API Call here
             }
+            
+            return Driver.empty()
         }
     }
     

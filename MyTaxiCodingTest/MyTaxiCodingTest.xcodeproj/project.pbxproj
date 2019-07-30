@@ -23,6 +23,9 @@
 		6D7306D522F04A430079A67C /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7306D422F04A430079A67C /* Coordinate.swift */; };
 		6D7306D722F04AD70079A67C /* TaxiSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7306D622F04AD70079A67C /* TaxiSearch.swift */; };
 		6D7306D922F053A20079A67C /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7306D822F053A20079A67C /* ActivityIndicator.swift */; };
+		6D7306DC22F0564F0079A67C /* MyTaxiAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7306DB22F0564F0079A67C /* MyTaxiAPI.swift */; };
+		6D7306DE22F0577F0079A67C /* StubResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7306DD22F0577F0079A67C /* StubResponse.swift */; };
+		6D7306DF22F057940079A67C /* StubResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7306DD22F0577F0079A67C /* StubResponse.swift */; };
 		B7ED6C90DEDD1908E33A277C /* Pods_MyTaxiCodingTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09DC889FF03F0878E1CE7682 /* Pods_MyTaxiCodingTestTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +65,8 @@
 		6D7306D422F04A430079A67C /* Coordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
 		6D7306D622F04AD70079A67C /* TaxiSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxiSearch.swift; sourceTree = "<group>"; };
 		6D7306D822F053A20079A67C /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		6D7306DB22F0564F0079A67C /* MyTaxiAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTaxiAPI.swift; sourceTree = "<group>"; };
+		6D7306DD22F0577F0079A67C /* StubResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubResponse.swift; sourceTree = "<group>"; };
 		8E7F669F1369235F7DE18E50 /* Pods-MyTaxiCodingTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTaxiCodingTestTests.debug.xcconfig"; path = "Target Support Files/Pods-MyTaxiCodingTestTests/Pods-MyTaxiCodingTestTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FDDEE0EB33022E26731C26B6 /* Pods-MyTaxiCodingTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTaxiCodingTestTests.release.xcconfig"; path = "Target Support Files/Pods-MyTaxiCodingTestTests/Pods-MyTaxiCodingTestTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -148,6 +153,7 @@
 			children = (
 				6D7306B222EF38A40079A67C /* MyTaxiCodingTestTests.swift */,
 				6D7306B422EF38A40079A67C /* Info.plist */,
+				6D7306DD22F0577F0079A67C /* StubResponse.swift */,
 			);
 			path = MyTaxiCodingTestTests;
 			sourceTree = "<group>";
@@ -195,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				6D7306D822F053A20079A67C /* ActivityIndicator.swift */,
+				6D7306DB22F0564F0079A67C /* MyTaxiAPI.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -386,10 +393,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D7306DF22F057940079A67C /* StubResponse.swift in Sources */,
 				6D7306CD22F03E210079A67C /* AppCoordinator.swift in Sources */,
 				6D7306A022EF38A10079A67C /* ListViewController.swift in Sources */,
 				6D7306CF22F046AA0079A67C /* ListViewModel.swift in Sources */,
 				6D7306D222F049C20079A67C /* Taxi.swift in Sources */,
+				6D7306DC22F0564F0079A67C /* MyTaxiAPI.swift in Sources */,
 				6D7306BE22EFF0370079A67C /* BaseCoordinator.swift in Sources */,
 				6D7306D922F053A20079A67C /* ActivityIndicator.swift in Sources */,
 				6D7306D522F04A430079A67C /* Coordinate.swift in Sources */,
@@ -404,6 +413,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D7306DE22F0577F0079A67C /* StubResponse.swift in Sources */,
 				6D7306B322EF38A40079A67C /* MyTaxiCodingTestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
