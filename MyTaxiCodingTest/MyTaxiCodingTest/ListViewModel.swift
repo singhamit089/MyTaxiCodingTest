@@ -19,6 +19,41 @@ public protocol ListViewModelOutputs {
     var elements: BehaviorRelay<[Taxi]> { get }
 }
 
-public struct ListViewModel {
+public protocol ListViewModelType {
+    var inputs: ListViewModelInputs { get }
+    var outputs: ListViewModelOutputs { get }
+}
+
+public struct ListViewModel: ListViewModelType,ListViewModelInputs,ListViewModelOutputs {
     
+    private let disposeBag = DisposeBag()
+    private let error = PublishSubject<Error>()
+    private var searchResult:TaxiSearch?
+    
+    init() {
+        
+        loadPageTrigger = PublishSubject<Void>()
+        elements = BehaviorRelay<[Taxi]>(value: [])
+        let isLoading = ActivityIndicator()
+        self.isLoading = isLoading.asDriver()
+        
+        let pageRequest = isLoading.asObservable().sample(loadPageTrigger).flatMap { [weak self] _isLoading -> Driver<[Taxi]> in
+            
+            guard let self = self else {
+                return Driver.empty()
+            }
+            
+            if !_isLoading {
+                
+                // Make API Call here
+            }
+        }
+    }
+    
+    
+    public var inputs: ListViewModelInputs { return self }
+    public var outputs: ListViewModelOutputs { return self }
+    public var loadPageTrigger: PublishSubject<Void>
+    public var isLoading: Driver<Bool>
+    public var elements: BehaviorRelay<[Taxi]>
 }
