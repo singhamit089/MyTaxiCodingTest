@@ -10,6 +10,7 @@
 #import <MapKit/MapKit.h>
 #import "MyTaxiCodingTest-Swift.h"
 #import "Annotation.h"
+#import "TaxiPinMKPinAnnotationView.h"
 
 @interface MapViewController ()<MKMapViewDelegate>
 @property (strong, nonatomic) IBOutlet MKMapView *taxiMapView;
@@ -30,7 +31,7 @@
 #pragma mark - MapKit
 
 -(MKAnnotationView *) mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
-    MKPinAnnotationView *taxiPin=[[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"current"];
+    MKAnnotationView *taxiPin=[[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"current"];
     
     UIButton *advertButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
     [advertButton addTarget:self action:@selector(onAnnotationClickAction:) forControlEvents:UIControlEventTouchUpInside];
