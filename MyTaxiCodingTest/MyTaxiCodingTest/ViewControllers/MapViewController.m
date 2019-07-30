@@ -10,7 +10,6 @@
 #import <MapKit/MapKit.h>
 #import "MyTaxiCodingTest-Swift.h"
 #import "Annotation.h"
-#import "TaxiPinMKPinAnnotationView.h"
 
 @interface MapViewController ()<MKMapViewDelegate>
 @property (strong, nonatomic) IBOutlet MKMapView *taxiMapView;
