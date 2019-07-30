@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct TaxiSearch:Codable {
+@objcMembers public class TaxiSearch:Codable {
     
     let taxiList:[Taxi]
     
@@ -16,7 +16,7 @@ public struct TaxiSearch:Codable {
         case taxiList = "poiList"
     }
     
-    public init(from decoder:Decoder) throws {
+    required public init(from decoder:Decoder) throws {
         let values = try decoder.container(keyedBy: TaxiSearchCokingKey.self)
         self.taxiList = try values.decode([Taxi].self, forKey: .taxiList)
     }

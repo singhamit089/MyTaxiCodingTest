@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct Coordinate: Codable {
+@objcMembers public class Coordinate: NSObject, Codable {
 
     let latitude:Double
     let longitude:Double
@@ -18,7 +18,7 @@ public struct Coordinate: Codable {
         case longitude
     }
     
-    public init(from decoder:Decoder) throws {
+    required public init(from decoder:Decoder) throws {
         let values = try decoder.container(keyedBy: CoordinateCodingKey.self)
         
         self.latitude = try values.decode(Double.self, forKey: .latitude)

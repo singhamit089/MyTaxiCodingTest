@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct Taxi: Codable {
+@objcMembers public class Taxi: NSObject, Codable {
     
     let id:Double
     let location:Coordinate
@@ -22,7 +22,7 @@ public struct Taxi: Codable {
         case heading
     }
     
-    public init(from decoder:Decoder) throws {
+    required public init(from decoder:Decoder) throws {
         let values = try decoder.container(keyedBy: TaxiCodingKey.self)
         
         self.id = try values.decode(Double.self, forKey: .id)
