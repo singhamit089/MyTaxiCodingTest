@@ -3,17 +3,21 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		5A77EB793C3B13EF27CB030A /* Pods_MyTaxiCodingTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4993C69D0CC41253E315D9A9 /* Pods_MyTaxiCodingTest.framework */; };
 		6D73069E22EF38A10079A67C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D73069D22EF38A10079A67C /* AppDelegate.swift */; };
-		6D7306A022EF38A10079A67C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D73069F22EF38A10079A67C /* ViewController.swift */; };
-		6D7306A322EF38A10079A67C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D7306A122EF38A10079A67C /* Main.storyboard */; };
+		6D7306A022EF38A10079A67C /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D73069F22EF38A10079A67C /* ListViewController.swift */; };
 		6D7306A522EF38A40079A67C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D7306A422EF38A40079A67C /* Assets.xcassets */; };
 		6D7306A822EF38A40079A67C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D7306A622EF38A40079A67C /* LaunchScreen.storyboard */; };
 		6D7306B322EF38A40079A67C /* MyTaxiCodingTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7306B222EF38A40079A67C /* MyTaxiCodingTestTests.swift */; };
+		6D7306BE22EFF0370079A67C /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7306BD22EFF0370079A67C /* BaseCoordinator.swift */; };
+		6D7306C122EFF1090079A67C /* RootTabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7306C022EFF1090079A67C /* RootTabBarCoordinator.swift */; };
+		6D7306CA22F027060079A67C /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D7306C822F027060079A67C /* MapViewController.m */; };
+		6D7306CB22F027060079A67C /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D7306C922F027060079A67C /* MapViewController.xib */; };
+		6D7306CD22F03E210079A67C /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7306CC22F03E210079A67C /* AppCoordinator.swift */; };
 		B7ED6C90DEDD1908E33A277C /* Pods_MyTaxiCodingTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09DC889FF03F0878E1CE7682 /* Pods_MyTaxiCodingTestTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,14 +38,20 @@
 		4993C69D0CC41253E315D9A9 /* Pods_MyTaxiCodingTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyTaxiCodingTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D73069A22EF38A10079A67C /* MyTaxiCodingTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTaxiCodingTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D73069D22EF38A10079A67C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6D73069F22EF38A10079A67C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		6D7306A222EF38A10079A67C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6D73069F22EF38A10079A67C /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		6D7306A422EF38A40079A67C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6D7306A722EF38A40079A67C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6D7306A922EF38A40079A67C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D7306AE22EF38A40079A67C /* MyTaxiCodingTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyTaxiCodingTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D7306B222EF38A40079A67C /* MyTaxiCodingTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTaxiCodingTestTests.swift; sourceTree = "<group>"; };
 		6D7306B422EF38A40079A67C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6D7306BD22EFF0370079A67C /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BaseCoordinator.swift; path = ../BaseCoordinator.swift; sourceTree = "<group>"; };
+		6D7306C022EFF1090079A67C /* RootTabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarCoordinator.swift; sourceTree = "<group>"; };
+		6D7306C222EFF1E50079A67C /* MyTaxiCodingTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyTaxiCodingTest-Bridging-Header.h"; sourceTree = "<group>"; };
+		6D7306C722F027060079A67C /* MapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		6D7306C822F027060079A67C /* MapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		6D7306C922F027060079A67C /* MapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
+		6D7306CC22F03E210079A67C /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		8E7F669F1369235F7DE18E50 /* Pods-MyTaxiCodingTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTaxiCodingTestTests.debug.xcconfig"; path = "Target Support Files/Pods-MyTaxiCodingTestTests/Pods-MyTaxiCodingTestTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FDDEE0EB33022E26731C26B6 /* Pods-MyTaxiCodingTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTaxiCodingTestTests.release.xcconfig"; path = "Target Support Files/Pods-MyTaxiCodingTestTests/Pods-MyTaxiCodingTestTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -74,7 +84,6 @@
 				8E7F669F1369235F7DE18E50 /* Pods-MyTaxiCodingTestTests.debug.xcconfig */,
 				FDDEE0EB33022E26731C26B6 /* Pods-MyTaxiCodingTestTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -111,11 +120,12 @@
 			isa = PBXGroup;
 			children = (
 				6D73069D22EF38A10079A67C /* AppDelegate.swift */,
-				6D73069F22EF38A10079A67C /* ViewController.swift */,
-				6D7306A122EF38A10079A67C /* Main.storyboard */,
+				6D7306BF22EFF0510079A67C /* Coordinators */,
+				6D7306C622EFF1F30079A67C /* ViewControllers */,
 				6D7306A422EF38A40079A67C /* Assets.xcassets */,
 				6D7306A622EF38A40079A67C /* LaunchScreen.storyboard */,
 				6D7306A922EF38A40079A67C /* Info.plist */,
+				6D7306C222EFF1E50079A67C /* MyTaxiCodingTest-Bridging-Header.h */,
 			);
 			path = MyTaxiCodingTest;
 			sourceTree = "<group>";
@@ -127,6 +137,27 @@
 				6D7306B422EF38A40079A67C /* Info.plist */,
 			);
 			path = MyTaxiCodingTestTests;
+			sourceTree = "<group>";
+		};
+		6D7306BF22EFF0510079A67C /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				6D7306BD22EFF0370079A67C /* BaseCoordinator.swift */,
+				6D7306C022EFF1090079A67C /* RootTabBarCoordinator.swift */,
+				6D7306CC22F03E210079A67C /* AppCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		6D7306C622EFF1F30079A67C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				6D73069F22EF38A10079A67C /* ListViewController.swift */,
+				6D7306C722F027060079A67C /* MapViewController.h */,
+				6D7306C822F027060079A67C /* MapViewController.m */,
+				6D7306C922F027060079A67C /* MapViewController.xib */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,6 +214,7 @@
 				TargetAttributes = {
 					6D73069922EF38A10079A67C = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 					};
 					6D7306AD22EF38A40079A67C = {
 						CreatedOnToolsVersion = 10.2.1;
@@ -215,8 +247,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D7306A822EF38A40079A67C /* LaunchScreen.storyboard in Resources */,
+				6D7306CB22F027060079A67C /* MapViewController.xib in Resources */,
 				6D7306A522EF38A40079A67C /* Assets.xcassets in Resources */,
-				6D7306A322EF38A10079A67C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,7 +347,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6D7306A022EF38A10079A67C /* ViewController.swift in Sources */,
+				6D7306CD22F03E210079A67C /* AppCoordinator.swift in Sources */,
+				6D7306A022EF38A10079A67C /* ListViewController.swift in Sources */,
+				6D7306BE22EFF0370079A67C /* BaseCoordinator.swift in Sources */,
+				6D7306CA22F027060079A67C /* MapViewController.m in Sources */,
+				6D7306C122EFF1090079A67C /* RootTabBarCoordinator.swift in Sources */,
 				6D73069E22EF38A10079A67C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,14 +375,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		6D7306A122EF38A10079A67C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6D7306A222EF38A10079A67C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		6D7306A622EF38A40079A67C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -479,6 +507,7 @@
 			baseConfigurationReference = 2AB2A43E9B56FE14695D14DB /* Pods-MyTaxiCodingTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MyTaxiCodingTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -487,6 +516,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.singhamit089.MyTaxiCodingTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyTaxiCodingTest/MyTaxiCodingTest-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -497,6 +528,7 @@
 			baseConfigurationReference = 21FD2FCDE7AC1D7B1152E44F /* Pods-MyTaxiCodingTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MyTaxiCodingTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -505,6 +537,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.singhamit089.MyTaxiCodingTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyTaxiCodingTest/MyTaxiCodingTest-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
