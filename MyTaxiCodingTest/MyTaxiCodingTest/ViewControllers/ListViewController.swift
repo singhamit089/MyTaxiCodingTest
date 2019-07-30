@@ -7,9 +7,15 @@
 //
 
 import UIKit
+import RxCocoa
+import RxSwift
+import RxDataSources
 
 class ListViewController: UIViewController {
 
+    private let disposeBag = DisposeBag()
+    private var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

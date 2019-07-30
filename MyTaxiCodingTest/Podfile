@@ -9,6 +9,7 @@ target 'MyTaxiCodingTest' do
     pod 'Moya/RxSwift'
     pod 'RxCocoa'
     pod 'RxSwift'
+    pod 'RxDataSources'
 
   target 'MyTaxiCodingTestTests' do
     inherit! :search_paths
