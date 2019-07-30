@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import MapKit
 
 @objcMembers public class Coordinate: NSObject, Codable {
 
@@ -28,5 +29,10 @@ import Foundation
     public init(latitude:Double,longitude:Double) {
         self.latitude = latitude
         self.longitude = longitude
+    }
+    
+    public init(location:CLLocationCoordinate2D) {
+        self.latitude = location.latitude
+        self.longitude = location.longitude
     }
 }

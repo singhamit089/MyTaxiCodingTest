@@ -55,7 +55,7 @@ class ListViewController: UIViewController,UITableViewDelegate {
     
     func configureTableView() {
         
-        title = "MyTaxi"
+        title = "MyTaxi - List"
         
         tableView = UITableView(frame: UIScreen.main.bounds)
         

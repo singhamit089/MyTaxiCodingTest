@@ -32,7 +32,7 @@ class TaxiTableViewCell: UITableViewCell {
     func configure(taxi:Taxi) {
 
         self.taxiTitleLabel.text = "\(taxi.fleetType) : \(taxi.id)"
-        self.location.text = "Lat : \(taxi.location.latitude) | Long : \(taxi.location.longitude)"
+        self.location.text = "\nLat : \(taxi.location.latitude) \nLong : \(taxi.location.longitude)\n"
         self.heading.text = "Heading towards : \(taxi.heading)"
         
         if taxi.fleetType == "TAXI" {

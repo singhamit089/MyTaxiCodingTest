@@ -32,6 +32,7 @@
 		6D7306E922F074120079A67C /* ListViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7306E622F073F50079A67C /* ListViewModelSpec.swift */; };
 		6D7306EE22F0A2D50079A67C /* TaxiTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7306EC22F0A2D50079A67C /* TaxiTableViewCell.swift */; };
 		6D7306EF22F0A2D50079A67C /* TaxiTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D7306ED22F0A2D50079A67C /* TaxiTableViewCell.xib */; };
+		6D7306F322F0D15A0079A67C /* Annotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D7306F222F0D15A0079A67C /* Annotation.m */; };
 		B7ED6C90DEDD1908E33A277C /* Pods_MyTaxiCodingTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09DC889FF03F0878E1CE7682 /* Pods_MyTaxiCodingTestTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +80,8 @@
 		6D7306E622F073F50079A67C /* ListViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModelSpec.swift; sourceTree = "<group>"; };
 		6D7306EC22F0A2D50079A67C /* TaxiTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxiTableViewCell.swift; sourceTree = "<group>"; };
 		6D7306ED22F0A2D50079A67C /* TaxiTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaxiTableViewCell.xib; sourceTree = "<group>"; };
+		6D7306F122F0D15A0079A67C /* Annotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Annotation.h; sourceTree = "<group>"; };
+		6D7306F222F0D15A0079A67C /* Annotation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Annotation.m; sourceTree = "<group>"; };
 		8E7F669F1369235F7DE18E50 /* Pods-MyTaxiCodingTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTaxiCodingTestTests.debug.xcconfig"; path = "Target Support Files/Pods-MyTaxiCodingTestTests/Pods-MyTaxiCodingTestTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FDDEE0EB33022E26731C26B6 /* Pods-MyTaxiCodingTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTaxiCodingTestTests.release.xcconfig"; path = "Target Support Files/Pods-MyTaxiCodingTestTests/Pods-MyTaxiCodingTestTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -208,6 +211,8 @@
 				6D7306D122F049C20079A67C /* Taxi.swift */,
 				6D7306D422F04A430079A67C /* Coordinate.swift */,
 				6D7306D622F04AD70079A67C /* TaxiSearch.swift */,
+				6D7306F122F0D15A0079A67C /* Annotation.h */,
+				6D7306F222F0D15A0079A67C /* Annotation.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -423,6 +428,7 @@
 			files = (
 				6D7306DF22F057940079A67C /* StubResponse.swift in Sources */,
 				6D7306CD22F03E210079A67C /* AppCoordinator.swift in Sources */,
+				6D7306F322F0D15A0079A67C /* Annotation.m in Sources */,
 				6D7306A022EF38A10079A67C /* ListViewController.swift in Sources */,
 				6D7306CF22F046AA0079A67C /* ListViewModel.swift in Sources */,
 				6D7306D222F049C20079A67C /* Taxi.swift in Sources */,
