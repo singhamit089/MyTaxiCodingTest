@@ -17,7 +17,7 @@ import Foundation
 
     enum TaxiCodingKey:String,CodingKey {
         case id
-        case location
+        case location = "coordinate"
         case fleetType
         case heading
     }

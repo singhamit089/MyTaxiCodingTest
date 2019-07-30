@@ -14,13 +14,13 @@ import RxSwift
     
     @objc static let sharedAPI = APIManager()
     
-    public func searchTaxi(p1: Coordinate,p2: Coordinate ) -> Single<[Taxi]> {
+    public func searchTaxi(p1: Coordinate,p2: Coordinate ) -> Single<TaxiSearch> {
         
         return MyTaxiProvider.rx.request(MyTaxiAPI.taxiSearch(p1: p1, p2: p2))
             .map(TaxiSearch.self)
             .observeOn(MainScheduler.instance)
-            .flatMap({ searchResult -> Single<[Taxi]> in
-                return Single.just(searchResult.taxiList)
+            .flatMap({ searchResult -> Single<TaxiSearch> in
+                return Single.just(searchResult)
             })
     }
     

@@ -28,6 +28,10 @@
 		6D7306DF22F057940079A67C /* StubResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7306DD22F0577F0079A67C /* StubResponse.swift */; };
 		6D7306E122F05CEC0079A67C /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7306E022F05CEC0079A67C /* APIManager.swift */; };
 		6D7306E322F05D590079A67C /* MyTaxiAPIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7306E222F05D590079A67C /* MyTaxiAPIProtocol.swift */; };
+		6D7306E522F0737A0079A67C /* SearchResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 6D7306E422F0737A0079A67C /* SearchResponse.json */; };
+		6D7306E922F074120079A67C /* ListViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7306E622F073F50079A67C /* ListViewModelSpec.swift */; };
+		6D7306EE22F0A2D50079A67C /* TaxiTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7306EC22F0A2D50079A67C /* TaxiTableViewCell.swift */; };
+		6D7306EF22F0A2D50079A67C /* TaxiTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D7306ED22F0A2D50079A67C /* TaxiTableViewCell.xib */; };
 		B7ED6C90DEDD1908E33A277C /* Pods_MyTaxiCodingTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09DC889FF03F0878E1CE7682 /* Pods_MyTaxiCodingTestTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +75,10 @@
 		6D7306DD22F0577F0079A67C /* StubResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubResponse.swift; sourceTree = "<group>"; };
 		6D7306E022F05CEC0079A67C /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		6D7306E222F05D590079A67C /* MyTaxiAPIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTaxiAPIProtocol.swift; sourceTree = "<group>"; };
+		6D7306E422F0737A0079A67C /* SearchResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SearchResponse.json; sourceTree = "<group>"; };
+		6D7306E622F073F50079A67C /* ListViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModelSpec.swift; sourceTree = "<group>"; };
+		6D7306EC22F0A2D50079A67C /* TaxiTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxiTableViewCell.swift; sourceTree = "<group>"; };
+		6D7306ED22F0A2D50079A67C /* TaxiTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaxiTableViewCell.xib; sourceTree = "<group>"; };
 		8E7F669F1369235F7DE18E50 /* Pods-MyTaxiCodingTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTaxiCodingTestTests.debug.xcconfig"; path = "Target Support Files/Pods-MyTaxiCodingTestTests/Pods-MyTaxiCodingTestTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FDDEE0EB33022E26731C26B6 /* Pods-MyTaxiCodingTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTaxiCodingTestTests.release.xcconfig"; path = "Target Support Files/Pods-MyTaxiCodingTestTests/Pods-MyTaxiCodingTestTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -140,6 +148,7 @@
 			children = (
 				6D73069D22EF38A10079A67C /* AppDelegate.swift */,
 				6D7306D322F049C80079A67C /* Models */,
+				6D7306F022F0A2DB0079A67C /* Views */,
 				6D7306D022F046AF0079A67C /* ViewModels */,
 				6D7306BF22EFF0510079A67C /* Coordinators */,
 				6D7306C622EFF1F30079A67C /* ViewControllers */,
@@ -155,9 +164,11 @@
 		6D7306B122EF38A40079A67C /* MyTaxiCodingTestTests */ = {
 			isa = PBXGroup;
 			children = (
+				6D7306E422F0737A0079A67C /* SearchResponse.json */,
 				6D7306B222EF38A40079A67C /* MyTaxiCodingTestTests.swift */,
 				6D7306B422EF38A40079A67C /* Info.plist */,
 				6D7306DD22F0577F0079A67C /* StubResponse.swift */,
+				6D7306E622F073F50079A67C /* ListViewModelSpec.swift */,
 			);
 			path = MyTaxiCodingTestTests;
 			sourceTree = "<group>";
@@ -210,6 +221,15 @@
 				6D7306E222F05D590079A67C /* MyTaxiAPIProtocol.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		6D7306F022F0A2DB0079A67C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6D7306EC22F0A2D50079A67C /* TaxiTableViewCell.swift */,
+				6D7306ED22F0A2D50079A67C /* TaxiTableViewCell.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,6 +321,7 @@
 				6D7306A822EF38A40079A67C /* LaunchScreen.storyboard in Resources */,
 				6D7306CB22F027060079A67C /* MapViewController.xib in Resources */,
 				6D7306A522EF38A40079A67C /* Assets.xcassets in Resources */,
+				6D7306EF22F0A2D50079A67C /* TaxiTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +329,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D7306E522F0737A0079A67C /* SearchResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,6 +432,7 @@
 				6D7306D922F053A20079A67C /* ActivityIndicator.swift in Sources */,
 				6D7306D522F04A430079A67C /* Coordinate.swift in Sources */,
 				6D7306CA22F027060079A67C /* MapViewController.m in Sources */,
+				6D7306EE22F0A2D50079A67C /* TaxiTableViewCell.swift in Sources */,
 				6D7306D722F04AD70079A67C /* TaxiSearch.swift in Sources */,
 				6D7306E322F05D590079A67C /* MyTaxiAPIProtocol.swift in Sources */,
 				6D7306C122EFF1090079A67C /* RootTabBarCoordinator.swift in Sources */,
@@ -421,6 +444,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D7306E922F074120079A67C /* ListViewModelSpec.swift in Sources */,
 				6D7306DE22F0577F0079A67C /* StubResponse.swift in Sources */,
 				6D7306B322EF38A40079A67C /* MyTaxiCodingTestTests.swift in Sources */,
 			);

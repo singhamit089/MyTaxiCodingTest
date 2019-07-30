@@ -10,6 +10,6 @@ import Foundation
 import RxSwift
 
 public protocol MyTaxiAPIProtocols {
-    func searchTaxi(p1: Coordinate, p2: Coordinate) -> Single<[Taxi]>
+    func searchTaxi(p1: Coordinate, p2: Coordinate) -> Single<TaxiSearch>
 }
 

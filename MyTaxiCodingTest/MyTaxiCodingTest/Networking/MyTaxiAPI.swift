@@ -83,7 +83,7 @@ let requestClosure = { (endpoint: Endpoint, done: MoyaProvider.RequestResultClos
         // Modify the request however you like.
         done(.success(request))
     } catch {
-        // done(.failure(MoyaError.underlying(error, <#Response?#>)))
+         done(.failure(MoyaError.underlying(error, nil)))
     }
 }
 

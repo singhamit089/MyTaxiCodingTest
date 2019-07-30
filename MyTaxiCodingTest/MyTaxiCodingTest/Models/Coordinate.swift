@@ -24,4 +24,9 @@ import Foundation
         self.latitude = try values.decode(Double.self, forKey: .latitude)
         self.longitude = try values.decode(Double.self, forKey: .longitude)
     }
+    
+    public init(latitude:Double,longitude:Double) {
+        self.latitude = latitude
+        self.longitude = longitude
+    }
 }

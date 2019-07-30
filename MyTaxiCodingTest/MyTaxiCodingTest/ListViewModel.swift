@@ -24,11 +24,13 @@ public protocol ListViewModelType {
     var outputs: ListViewModelOutputs { get }
 }
 
-public struct ListViewModel: ListViewModelType,ListViewModelInputs,ListViewModelOutputs {
+public class ListViewModel: ListViewModelType,ListViewModelInputs,ListViewModelOutputs {
     
     private let disposeBag = DisposeBag()
     private let error = PublishSubject<Error>()
-    private var searchResult:TaxiSearch?
+    
+    private let p1 = Coordinate(latitude: 53.694865, longitude: 9.757589)
+    private let p2 = Coordinate(latitude: 53.394655, longitude: 10.099891)
     
     init() {
         
@@ -37,15 +39,40 @@ public struct ListViewModel: ListViewModelType,ListViewModelInputs,ListViewModel
         let isLoading = ActivityIndicator()
         self.isLoading = isLoading.asDriver()
         
-        let pageRequest = isLoading.asObservable().sample(loadPageTrigger).flatMap { _isLoading -> Driver<[Taxi]> in
+        let pageRequest = loadPageTrigger.asDriver(onErrorJustReturn: ()).flatMap { [weak self] () -> Driver<[Taxi]> in
             
-            if !_isLoading {
-                
-                // Make API Call here
+            guard let self = self else {
+                return Driver.empty()
             }
             
-            return Driver.empty()
+            self.elements.accept([])
+            
+            return APIManager.sharedAPI.searchTaxi(p1: self.p1, p2: self.p2)
+                .trackActivity(isLoading).asDriver(onErrorDriveWith: Driver.empty()).flatMap({ taxiSearch -> Driver<[Taxi]> in
+                    return Single.just(taxiSearch.taxiList).asDriver(onErrorJustReturn: [])
+                })
         }
+        
+        let request = Observable.of(pageRequest.asObservable())
+            .merge()
+            .share(replay: 1)
+        
+        let response = request.flatMap { _ -> Observable<[Taxi]> in
+            request
+                .do(onError: { _error in
+                    self.error.onNext(_error)
+                }).catchError({ _ -> Observable<[Taxi]> in
+                    Observable.empty()
+                })
+            }.share(replay: 1)
+        
+        Observable
+            .combineLatest(request, response, elements.asObservable()) { _, response, elements in
+                return response+elements
+            }
+            .sample(response)
+            .bind(to: elements)
+            .disposed(by: disposeBag)
     }
     
     
